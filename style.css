@@ -1,0 +1,295 @@
+*{margin:0;
+padding: 0;}
+
+
+
+.yellowback{position: relative;}
+
+.plate{position: absolute;}
+
+.c{border:1px solid black;}
+
+.fnt{font-size: 14px;}
+
+.mt1{margin-top:90px;}
+
+.margintxt{margin-top: 220px;}
+.absolute11{
+	position: absolute;
+	 /*background: transparent;*/
+	 height: 100%;
+	 opacity: 0;
+
+
+}
+.absolute11 h1{font-size: 26px;
+	margin-left: 50px;
+	margin-top: 200px;
+	font-family: 'Inconsolata',sans-serif;
+	font-weight: bold;
+ }
+.absolute11 p{margin-left: 50px;
+	font-size: 15px;
+	font-family: 'Inconsolata',sans-serif;
+}
+
+.absolute11:hover{
+	opacity: 0.8;
+	background-blend-mode: overlay;
+background: linear-gradient(180deg, rgba(5,5,5,0.2) 10%, rgba(0,0,0,1) 190%);
+color: white;
+transition: 0.5s;
+height: 100%;
+}
+
+.relative11{
+	position: relative;
+	z-index: 1;
+}
+
+.absolute1{position: absolute;
+height: 320px;
+width: 260px; 
+opacity:0;
+}
+
+.absolute1:hover{opacity: 0.8;
+	background-blend-mode: overlay;
+background-color: rgb(49, 49, 49);
+color: white;}
+
+
+
+.relative1{position: relative;}
+
+.font1{font-family: 'Merriweather',sans-serif;}
+
+.font2{font-family: 'Inconsolata',sans-serif;}
+.f2{font-size: 17.5px;}
+
+
+.maindiv{margin-top: -100px;}
+
+
+
+.menu1:hover{transition: 0.2s;
+/*transform: rotate(360deg);*/
+transform: scale(1.1,1.1);}
+
+.icons1{transition: 1s;
+	transform: rotate(180deg);
+}
+
+.icons1:hover{transition: 1s;
+transform: rotate(360deg);}
+
+.icons2:hover{transition: 0.2s;
+transform: scale(1.1,1.1);}
+
+.icons3:hover{transition: 0.2s;
+transform: scale(1.2,1.2);}
+
+.spoon:hover{transition: 0.5s;
+transform: translateY(-15px);}
+
+/*.spoon1:hover{transition: 0.5s;
+transform: translateY(-15px);
+color: red;}*/
+
+
+.menu2:hover{transition: 0.5s;
+transform: translateX(50px;);}
+
+
+/*.animation{*/
+	/*height:100px;
+	width:100px;*/
+	/*background-color: lightblue;*/
+/*	position: relative;
+	animation-name: demo;
+	animation-duration: 4s;*/
+	/*animation-delay:2s;*/
+	/*animation-iteration-count:3;*/
+	/*animation-iteration-count: infinite;*/
+/*	animation-direction: reverse;*/
+	/*animation-direction:alternate;*/
+	/*animation-direction:reverse-alternate;*/
+/*}*/
+
+/*@keyframes demo{*/
+	/*from {background-color: black;}
+	to {background-color:orange;}*/
+/*	from{transform: translateX(-50px);}
+}*/
+
+
+
+
+/*.animation1{position: relative;
+	animation-name: demo1;
+	animation-duration: 2s;}
+
+@keyframes demo1{
+
+	from{transform: translateY(50px);
+}*/
+
+
+/*.animation2{position: relative;
+	animation-name: demo2;
+	animation-duration: 2s;}
+
+@keyframes demo2{
+
+	from{transform: translateY(-50px);
+}
+*/
+
+
+@media screen and (min-width:400px) and (max-width:900px){
+
+.frenchfries{display: none;}
+
+.hungry h6,h5{text-align: center;}
+.hungry button{display: block;
+margin: auto;}
+.hungry{
+	width: 75%;
+}
+.aboutus{
+	text-align: left;
+}
+
+
+.spoondiv{
+	margin:auto;
+}
+.spoondiv button{
+	width: 75%;
+	display: block;
+	/*margin: auto !important;*/
+	margin-left: 65px;
+	margin-bottom: 50px !important;
+}
+
+.logofooter {margin-left: 148px;}
+.spoondiv h2{
+	font-size: 25px;
+	text-align: center;
+	margin-left: 35px;
+	width: 400px;
+	display: block;
+	margin-bottom: 10px;
+}
+.spoon{display: none;}
+
+.abtinside p{
+	text-align: left;
+}
+.resinside p{
+	text-align: left;
+}
+
+.res{
+margin-left: 200px;
+}
+
+.socials{
+	width: 110px;
+}
+.relative11{
+	width: 400px;
+	margin-left:35px; 
+	margin: auto !important;
+
+}
+.absolute11 {
+	width:100%;
+	margin: auto !important;
+}
+.absolute11 h1{
+	width:250px;
+	text-align: center;
+	margin: auto !important;
+	margin-top: 400px !important;
+	
+}
+.absolute11 p{
+	width:250px;
+	margin: auto !important;
+	/*margin-top: 0px !important;*/
+	text-align: center;
+}
+
+.absolute11 h1{
+	margin-top: 400px;
+}
+
+.img1{
+	height: 550px !important;
+	width: 400px !important;
+	margin: auto !important;}
+
+.tabdiv p {
+	display: none;}	
+
+.platediv p{
+	display: none;
+
+}
+.platediv h1{
+text-align: center !important;
+width:350px !important;
+margin-left: 0px !important;
+}
+.platediv button{
+text-align: center !important;
+margin-left: -30px !important;
+display: block !important;
+width:350px !important;
+}
+.platediv .plate{
+	margin-top: 200px;
+}
+.maindiv_dishes{
+	/*border:1px solid red;*/
+	margin: auto !important;
+}
+
+.soupimg{
+	display: none;
+}
+
+
+.soupdiv h5,h3{
+	text-align: left;
+	width: 100%;
+}
+
+.soupdiv p{
+	text-align: left;
+width: 100% !important;
+display: flex;
+}
+
+.chefimg{
+	width:100% !important;
+	display: flex;
+}
+
+.chefimg1 {
+	width: 50%;}
+
+}
+
+#loader {  
+    position: fixed;  
+    left: 0px;  
+    top: 0px;  
+    width: 100%;  
+    height: 100%;  
+    z-index: 9999;  
+    /*background: url('photos/358_fried_egg_db.gif') 50% 50% no-repeat rgb(255, 184, 198);  */
+    background: url('photos/Pizza Loader - Imgur.gif') 50% 50% no-repeat rgb(255, 255, 255); 
+    /*background-size: 500px 350px;*/
+}  

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant</title>
+       <link rel = "icon" href = "photos/favicon.ico">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script> 
+<!--   <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="OwlCarousel2-2.3.4\dist\assets\owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="OwlCarousel2-2.3.4\dist\assets\owl.theme.default.min.css">
+  <!-- <script src="jquery.min.js"></script> -->
+<script type="text/javascript" src="OwlCarousel2-2.3.4\dist\owl.carousel.js"></script>
+</head>
+<body style="overflow-x: hidden;">
+
+<div id="loader"></div> 
+
+
+<!-- ............................................NAVBAR................................................. -->
+
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+	<div class="container">
+  <a class="navbar-brand" href="index.html">
+  	<img src="photos/logo.png" class="animation">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+    <span class="navbar-toggler-icon text-light"><i class="fa fa-bars text-light ftext1" aria-hidden="true"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-3 p-2 font2 f2">
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="menu.html">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="about.html">About</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link text-light" href="contact.html">Contact</a>
+      </li>
+    </ul>
+
+    <button type="button" class="btn btn-black ml-2 btn-outline-warning pr-5 pl-5 pt-2 pb-2 ml-auto " data-toggle="modal" data-target="#exampleModal">
+  MAKE A RESERVATION
+</button>
+</div>
+</div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+                <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div class="modal-header  border-0 ">
+        <div class="container">
+        <div class="row mx-auto c border-warning border-bottom-0 border-top-0 border-right-0" style="border:2px solid orange;">
+        <h5 id="exampleModalLabel" class="modal-title font1 w-25 ml-2 mt-3" ><strong>Make A Reservation</strong></h5>
+                <img src="photos/pngfind.png" class="float-right  ml-auto  rounded" width="200" >
+</div>
+</div>
+</div>
+ <div class="modal-body font2">
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6 font2">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+    </div>
+    <div class="form-group col-md-6 font2">
+
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Phone">
+    </div>
+  </div>
+  <div class="form-group font2">
+    <input type="text" class="form-control" id="inputAddress" placeholder="Email">
+  </div>
+  <div class="form-group font2">
+    <select class="form-control w-100 mx-auto " id="exampleFormControlSelect2">
+      <option selected>Person</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>10+</option>
+    </select>
+  </div>
+  <div class="form-group">
+     <select class="form-control font2" id="exampleFormControlSelect1">
+      <option selected>Time</option>
+      <option>9:00 AM</option>
+      <option>11:00 AM</option>
+      <option>12:00 AM</option>
+      <option>1:00 PM</option>
+      <option>2:00 PM</option>
+       <option>3:00 PM</option>
+        <option>7:00 PM</option>
+         <option>8:00 PM</option>
+          <option>9:00 PM</option>
+    </select>
+    </div>
+</form>
+</div>
+       <div class="modal-footer bg-warning">
+        <div class="container">
+          <p class="font2 w-75 mx-auto" style="font-size: 16px;">Apparently we had reached a great height in the atmos, for the sky was a dead black, and the stars had twinkle. By which lifts the light.</p> 
+        <button type="button" class="btn btn-light pr-5 pl-5 w-75 ml-5 font2"><strong>SUBMIT</strong></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIRST DISPLAY(PLATE) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+
+<div class="card mb-3 mt-4 border-0 platediv" style="width: 100%;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="photos/Vector.png" class="card-img" alt="img" height="680">
+      <img src="photos/plate.png" class="card-img-overlay ml-5 mt1 icons1 plate "data-aos="fade-right" width="450" height="450">
+    </div>
+    <div class=" card-body col-md-8 mt-5  text-center font1" >
+      <div class="card-body ml-5 mt1" >
+        <h1 class="card-title mt-5 text-left w-50 ml-5" data-aos="fade-up" style="font-size: 35px;">
+The Spectacle <strong>Before Us
+Was Indeed</strong> Sublime.
+</h1>
+     <p class="card-text text-left fnt w-50 text-muted ml-5 font2" data-aos="fade-up">Apparently, we had reached a great height in the atmosphere, for the sky was a dead black, and which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+        <div class="container ml-3" data-aos="fade-up">
+        <button type="button" class="btn btn-warning btn-sm ml-2  mt-2 font2 float-left pr-5 pl-5 pt-2 pb-2 animation1"><strong>ORDER ONLINE</strong></button>
+        <button type="button" class="btn btn-outline-warning btn-sm mt-2 ml-2 font2 float-left pr-5 pl-5 pt-2 pb-2 animation1"><strong>OUR LOCATION</strong></button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ----------------------- DISPLAY DISHES (CAROUSEL) PORTFOLIO------------------------------------------ -->
+<div class="maindiv_dishes">
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <h5 class="text-center mt-5 font2" data-aos="fade-up"><strong>Menu</strong></h5>
+  </div>
+    <h2 class="text-center mt-1 mb-5 font1" data-aos="fade-up"><strong>Taste Our Foods & Enjoy</strong></h2>
+  </div>
+
+<div class="container mt-5" style="cursor: pointer;">
+<div class="owl-carousel owl-theme">
+    <div class="item relative11">
+      <div class="absolute11 rounded">
+        <h1 class="">BLUEBERRY MILK SMOOTHIE</h1>
+        <p> With Fresh Peppermint</p>
+      </div>
+      <img class="rounded img1" src="photos/bowl-calcium-cereal.png" width="260" height="320">
+    </div>
+    <div class="item relative11">
+      <div class="absolute11 rounded">
+        <h1 class="">SPICY CHICKEN SPAGHETTI</h1>
+        <p>Served with green chillies</p>
+      </div>
+      <img class="rounded img1"  src="photos/bowl-delicious-dinner.png" width="260" height="320">
+    </div>
+    <div class="item relative11">
+      <div class="absolute11 rounded">
+        <h1 class="w-75">SMOKED BEEF SUB-SANDWICH</h1>
+        <p>Slow cooked beef sub</p>
+      </div>
+      <img class="rounded img1" src="photos/bread-bun-chopping-board.png" width="260" height="320">
+    </div>
+     <div class="item relative11">
+      <div class="absolute11 rounded">
+        <h1 class="w-75" >FRESH PUMPKIN JUICE</h1>
+        <p>Chilled drink with cinnamon</p>
+      </div>
+    <img class="rounded img1" src="photos/antioxidant-beverage-carrot-juice.png" width="260" height="320">
+    </div>
+    <div class="item relative11 ">
+      <div class="absolute11 rounded">
+        <h1 class="">COLD MILK SHAKE JUICE</h1>
+        <p>With fresh milk</p>
+      </div>
+      <img class="rounded img1" src="photos/sec.jpg" width="260" height="320">
+    </div>  
+</div>
+</div>
+</div>
+
+                       <!-- MENU MENU MENU MENU MENU MENU MENU MENU MENU -->
+
+
+
+
+<div class="container font2 tabdiv" id="list-tab" role="tablist" style="margin-top: 150px;">
+<ul class="nav justify-content-center tab1">
+  <li class="nav-item mt-5">
+    <a class="list-group-item list-group-item-action active nav-link text-dark bg-white  border-top-0 border-left-0  border-right-0 border-warning btn1" id="list-home-list" data-toggle="list" href="#list-home" role="tab" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab"><i class="fa fa-coffee ml-3" aria-hidden="true"></i><p><strong>Breakfast</strong></p></a>
+  </li>
+  <li class="nav-item mt-5">
+    <a class="list-group-item list-group-item-action nav-link text-dark bg-white  border-top-0 border-left-0  border-right-0 border-warning btn1" id="list-home-list" data-toggle="list" href="#list-home" role="tab"><i class="fa fa-cutlery ml-3" aria-hidden="true"></i><p><strong>Lunch</strong></p></a>
+  </li>
+  <li class="nav-item mt-5">
+    <a class="list-group-item list-group-item-action nav-link text-dark bg-white  border-top-0 border-left-0  border-right-0 border-warning" id="list-home-list" data-toggle="list" href="#list-home" role="tab"><i class="fa fa-moon-o ml-3 " aria-hidden="true"></i><p><strong>Dinner</strong></p></a>
+  </li>
+  <li class="nav-item mt-5">
+    <a class="list-group-item list-group-item-action nav-link text-dark bg-white  border-top-0 border-left-0  border-right-0 border-warning" id="list-home-list" data-toggle="list" href="#list-home" role="tab"><i class="fa fa-birthday-cake ml-3" aria-hidden="true"></i><p><strong>Dessert</strong></p></a>
+  </li>
+  <li class="nav-item mt-5">
+    <a class="list-group-item list-group-item-action nav-link text-dark bg-white  border-top-0 border-left-0  border-right-0 border-warning"id="list-home-list" data-toggle="list" href="#list-home"><i class="fa fa-glass ml-3" aria-hidden="true"></i><p><strong>Drinks</strong></p></a>
+  </li>
+</ul>
+</div>
+
+<div class="container mb-5 rounded tab-pane fade show active" id="list-home" role="tabpanel" style=" background-color:#F4FAFD  ; position: relative;">
+    <div class="img-fluid ml-5 float-right w-100  rounded">
+    <img src="photos/egg.png" class="float-right rounded" data-aos="fade-down-left" width="200" height="auto">
+  </div>
+   <div class="row justify-content-center ">
+
+
+    <div class="col-lg-4 "  style="margin-top: -50px;" >
+  <div class="card border-top-0 border-left-0  border-bottom-0 menu1" style="width: 22rem; background-color: #F4FAFD;">
+    <div class="card-body text-left items" data-aos="zoom-in">
+      <h5 class="card-title w-100 font1"  style="font-size: 15px;"><strong>BREAKFAST BOWL</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$8.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Black Bean Cake, Greens, Tomato & Avocado Pico drizzled with Lime Cream (Add Egg $1)</p>
+      
+         <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>EGG SANDWICH</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$7.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Everything Bagel with Cream Cheese, Bacon, Tomato, Red Onion, Basil Pesto, Arugula</p>
+      
+         <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>BREAKFAST BURRITO</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$9.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Three Scrambled Eggs, Cheddar, Our Housemade Black Bean Cake, Avocado, Pico, & Lime Cream</p>
+    </div>
+  </div>
+</div>
+
+  <div class="tab-pane fade show col-lg-4 active menu1" id="list-profile" role="tabpanel" style="margin-top: -50px;">
+  <div class="card border-0" style="width: 22rem; background-color: #F4FAFD ;">
+    <div class="card-body items" data-aos="zoom-in">
+       <h5 class="card-title w-100 font1 " style="font-size: 15px;"><strong>VEGGIE JAMMIE</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$5.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Everything Bagel with our Homemade Tofu Herb Spread, Cucumber Tomato, Red Onion, & Arugula</p>
+    
+         <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>BAGEL WITH CREAM CHEESE</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$6.00</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Everything Bagel with Cream Cheese, Bacon, Tomato, Red Onion, Basil Pesto, Arugula</p>
+  
+         <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>BREAKFAST PASTRIES</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$9.00</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Three Scrambled Eggs, Cheddar, Our Housemade Black Bean Cake, Avocado, Pico, & Lime Cream</p>
+      
+       <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>FRIED EGG</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$9.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Three Fried Eggs, house hot sauce, local cheddar mac, lettuce, pickle & onion on a sesame roll</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 tab-pane fade show menu1" id="list-dinner" role="tabpanel"  style="margin-top: -50px; ">
+  <div class="card border-top-0 border-right-0  border-bottom-0" style="width: 22rem; background-color: #F4FAFD ;">
+    <div class="card-body" data-aos="zoom-in">
+       <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>SMOKED SALMON BAGEL</strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$9.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Black Bean Cake, Greens, Tomato & Avocado Pico drizzled with Lime Cream (Add Egg $1)</p>
+      
+         <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>BREAKFAST JAMMIE </strong><span class="float-right text-warning" style="font-size: 14px;"><strong>$6.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Everything Bagel with Cream Cheese, Bacon, Tomato, Red Onion, Basil Pesto, Arugula</p>
+      
+         <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>AVOCADO TOAST</strong> <span class="float-right text-warning" style="font-size: 14px;"><strong>$7.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Three Scrambled Eggs, Cheddar, Our Housemade Black Bean Cake, Avocado, Pico, & Lime Cream</p>
+
+     <h5 class="card-title w-100 font1" style="font-size: 15px;"><strong>AVOCADO TOAST</strong> <span class="float-right text-warning" style="font-size: 14px;"><strong>$6.50</strong></span></h5>
+      <p class="text-muted w-75 font2 mb-3" style="font-size: 13px;">Three Scrambled Eggs, Cheddar, Our Housemade Black Bean Cake, Avocado, Pico, & Lime Cream</p>
+    </div>
+  </div>
+</div>
+<div class=" row img float-left w-100 rounded">
+<img src="photos/bread.png" data-aos="fade-right" class="mt-0 rounded " width="350" height="100">
+</div>
+</div>
+</div>
+
+  
+
+
+
+
+<!-- XXXXXXXXXXXXXXXXXXXX          FRENCH FRIES            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+<div class="container-fluid" style="position: relative; height: 200px;margin-top: 200px; background-color: #0b1727;" >
+<div class="row justify-content-center">
+<div class="col-sm-5 text-center frenchfries">
+<center><img src="photos/fried-clipart-transparent-background-7.png" data-aos="fade-up" class="relative1 " width="200" height="250" style="position: absolute;margin-top:-50px;margin-left: 150px;"></center>
+</div>
+<div class="col-sm-5 mt-5 ml-5 text-left hungry">
+  <h6 class="text-warning mt-4 font2">Hungry?</h6>
+  <h5 class="text-light font1 ">We will home deliver !</h5>
+  <button type="btn" class="btn btn-warning text-secondary mt-3 font2 pr-5 pl-5 pt-1 pb-1"><strong>MAKE AN ORDER</strong></button>
+</div>
+</div>
+</div>
+    
+
+<!-- XXXXXXXXXXXXXXXXXXXX            ABOUT US      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+<div class="container-fluid ">
+  <div class="row ">
+    <div class="col-md-auto ">
+<div class="img-fluid  float-right mt-5 " >
+  <img src="photos/soup.png" alt='soup' data-aos='fade-left' class="mt-5 relative1 soupimg  text-center" height="500" width="auto" >
+</div>
+<div class="row mt-5">
+  <div class="col-md mt-4 ml-5 soupdiv">
+    <h5 class="mt-5 font2 aboutus" data-aos='fade-up'><strong>About us</strong></h5>
+    <h3 class="font1" data-aos='fade-up'><strong>Who Are We?</strong></h3>
+    <p class="w-50 mt-3 font2" data-aos='fade-up' data-aos-delay="200">We are a chain of theme restaurant founded in 1971 in London. In 1979, the cafe began covering its walls with rock and roll memorabilia, a tradition which expanded to others in the chain.</p>
+   <button type="btn" data-aos='fade-up'data-aos-delay="250" class="btn btn-warning text-secondary mt-n1 font2 pr-5 pl-5" href="#" ><strong>LEARN MORE</strong></button>
+    <div class="row  mt-5 w-75 chefimg">
+      <div class="col-sm chefimg1" data-aos='fade-up' data-aos-delay="150">
+        <img src="photos/1.png" class="rounded-circle text-left icons3" width="150" height="150">
+        <h6 class="text-muted ml-3 mt-3 font2"><strong>Gordon Ramsey</strong></h6>
+        <p class="text-muted ml-4 font2 " style="font-size: 12px;">Owner & Founder</p>
+      </div>
+      <div class="col-sm chefimg1" data-aos='fade-up' data-aos-delay="150">
+          <img src="photos/2.png" class="rounded-circle text-left icons3" width="150" height="150">
+        <h6 class="text-muted ml-3 mt-3 font2"><strong>Gordon Ramsey</strong></h6>
+        <p class="text-muted ml-4 font2" style="font-size: 12px;">Owner & Founder</p>
+      </div>
+       <div class="col-sm chefimg1" data-aos='fade-up' data-aos-delay="150">
+          <img src="photos/3.png" class="rounded-circle text-left icons3" width="150" height="150">
+        <h6 class="text-muted ml-3 mt-3 font2"><strong>Gordon Ramsey</strong></h6>
+        <p class="text-muted ml-4 font2" style="font-size: 12px;">Owner & Founder</p>
+      </div>
+         <div class="col-sm chefimg1" data-aos='fade-up' data-aos-delay="150">
+          <img src="photos/4.png" class="rounded-circle text-left icons3" width="150" height="150">
+        <h6 class="text-muted ml-3 mt-3 font2"><strong>Gordon Ramsey</strong></h6>
+        <p class="text-muted ml-4 mb-5 font2 " style="font-size: 12px;">Owner & Founder</p>
+      </div>
+         <div class="col-sm chefimg1" data-aos='fade-up' data-aos-delay="150">
+          <img src="photos/5.png" class="rounded-circle text-left icons3" width="150" height="150">
+        <h6 class="text-muted ml-3 mt-3 font2"><strong>Gordon Ramsey</strong></h6>
+        <p class="text-muted ml-4 mb-5 font2" style="font-size: 12px;">Owner & Founder</p>
+      </div>
+         <div class="col-sm chefimg1" data-aos='fade-up' data-aos-delay="150">
+          <img src="photos/6.png" class="rounded-circle text-left icons3" width="150" height="150">
+        <h6 class="text-muted ml-3 mt-3 font2"><strong>Gordon Ramsey</strong></h6>
+        <p class="text-muted ml-4 mb-5 font2" style="font-size: 12px;">Owner & Founder</p>
+      </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<div class="container-fluid  bg-light mb-5" style="position: relative;margin-top: 100px;">
+     <div class="row">
+       <img src="photos/green.png" height="500" data-aos='fade-right'style="position: absolute;margin-top: -100px;">
+     </div>
+         <div class="col-lg-12   text-center">
+          <h5 class="mt-5 font2"><strong>Location & Timing</strong></h5>
+           <h1 class="mt-2 font1"><strong>Contact with us</strong></h1>
+        </div>
+        <div class="container-fluid mx-auto">
+  <div class="row mt-4 justify-content-center">
+      <div class="col-sm-3 m-2 rounded bg-white ">
+       <p style="font-size: 13px;" class="mt-4 w-75 font2"><i class="fa fa-map text-danger mt-2" aria-hidden="true"></i><span class="ml-2">Av. Paz Soldán 290, San Isidro,<span class="ml-0">Lima 27 - Peru</span></span></p>
+        <a href="#" class="ml-1 text-dark font2" style="font-size: 13px;"><span class="mr-2"><i class="fa fa-phone text-danger mt-3" aria-hidden="true"></span></i>+511 442-2777</span></a>
+        <a href="#" class="text-dark"><p class="mt-4 ml-1 font2" style="font-size: 13px;"><i class="fa fa-envelope text-danger " aria-hidden="true"></i><span class="ml-2" >mail@restaurantpro.com</span></p></a>
+      </div>
+  <div class="col-sm-3  bg-white m-2 rounded ">
+    <h6 class="text-danger mt-4 font2" style="font-size: 14px;"><strong>Hours of service</strong></h6>
+    <p style="font-size:13px;" class="font2">Monday to Saturday</p>
+    <p style="font-size: 13px; margin-top: -15px;" class="text-muted w-50 font2">1:00 pm - 3:00 pm and 
+   7:00 pm -11:00 pm</p>
+    <p style="font-size: 13px;" class="font2">Sunday</p>
+    <p style="font-size: 11px; margin-top: -15px;" class="text-muted font2">12:30 pm - 3:30 pm</p>
+</div>
+<div class="col-sm-3  m-2   rounded bg-white">
+  <img src="photos/kisspng-soup.png" height="100" data-aos='fade-down-left' class="float-right rounded">
+  <h6 style="font-size: 14px;" class="mt-4 font2"><strong>Telephone support</strong></h6>
+  <p style="font-size: 13px;" class="mt-3 font2 w-50">Monday  to Saturday from 9:00 am to 9:00 pm</p> 
+  <button type="btn" class="btn text-light mt-3 mb-3 font2 pr-5 pl-5" href="#" style="background-color: #ff5e48;border:1px solid #ff533b;">MAKE A RESERVATION</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
+
+
+
+
+
+
+<div class="clearfix"></div>
+<div class="bg-light mt-5">
+<div class="container text-center p-5 bg-light mt-5  ">
+  <div class="row justify-content-center ">
+    <div class="col-lg text-center ">
+      <h1 class="text-dark font1" data-aos="fade-up"><strong>Feel free to drop us a line!</strong></h1>
+      <p class="text-muted text-center font2 w-50 mx-auto" data-aos="fade-up" data-aos-delay="200">Let's talk if you have any query or suggestion. We are open to learn from you. So don't hesitate to reach us anytime.</p>
+</div>
+</div>
+<form class="mt-3  ml-5">
+  <div class="row justify-content-center">
+  <div class="form-group col font2 ">
+    <input type="text" class="form-control mb-2" id="formGroupExampleInput" placeholder="Your Name">
+    <input type="text" class="form-control mb-2" id="formGroupExampleInput2" placeholder="Subject">
+    <input type="text" class="form-control mb-2" id="formGroupExampleInput2" placeholder="Email Address">
+    <div class="form-check float-left ml-1">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label text-muted " for="defaultCheck1">
+   Send me a copy
+  </label>
+</div>
+  </div>
+  <div class="col ">
+   <textarea class="form-control b1 w-75 h-75 font2" id="exampleFormControlTextarea1" placeholder="Type your message here" rows="3"></textarea>
+<button type="btn" class="btn btn-dark bg-black float-left mt-2 font2 pr-5 pl-5"><strong>GIVE US A SHOT</strong></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+
+<!-- ............................................................................................................................................. -->
+
+<div class="container-fluid">
+  <div class="row ">
+    <!-- <div class="col-12  w-100"> -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13231.900606933106!2d-118.394886!3d33.993172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7507210f2eb23d53!2sCali%20Street%20Cafe!5e0!3m2!1sen!2sus!4v1583398331031!5m2!1sen!2sus" width="100%" class=" mb-5" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+</div>
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+
+<div class="container-fluid"style="background-color: #0b1727;">
+<div class="row">
+  <div class="col-4-sm ml-5" style="width: 50%;display: flex;">
+<img src="photos/pngfood2.png" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="mt-5 ml-5 spoon" width="100">
+    <div class="ml-2 spoondiv">
+      <img src="photos/logo.png" class="mb-2 mt-5 logofooter" width="130">
+      <h2 class="text-light font1 h2foot" style="width: 350px;">Want To Taste Our Food?</h2>
+<button type="btn" class="btn btn-warning mt-1 mb-5 text-secondary font2 pr-5 pl-5"><strong>ORDER ONLINE</strong></button>
+</div>
+</div>
+<div style="display: flex;width: 45%;">
+<div class=" my-auto text-light border border-bottom-0 border-top-0 border-right-0 border-secondary abt" style="width: 50%;">
+  <div class="col-4-sm ml-3" >
+    <h6 class="mb-4 text-light text-uppercase font2"><strong>About</strong></h6>
+  
+  <div class="abtinside">
+  <p><a href="#" class="text-muted font2">About</a></p>
+     <p><a href="#" class="text-muted font2">Services</a></p>
+      <p><a href="#" class="text-muted font2">Careers</a></p>
+      <p><a href="#" class="text-muted font2">Hire Us</a></p>
+  </div>
+</div>
+</div>
+
+<div class=" my-auto text-light border border-bottom-0 border-top-0 border-right-0 border-secondary res"  >
+  <div class="col-4-sm ml-3 " >
+     <h6 class="mb-4 text-light text-uppercase font2"><strong>Resources</strong></h6>
+  <div class="resinside">
+       <p><a href="#" class="text-muted font2">Terms</a></p>
+     <p><a href="#" class="text-muted font2">Help</a></p>
+      <p><a href="#" class="text-muted font2">Privacy</a></p>
+      <div class="socials"><a href="#" class="text-muted"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+      <a href="#" class="text-muted"><i class="fa fa-instagram ml-2" aria-hidden="true"></i></a>
+      <a href="#" class="text-muted"><i class="fa fa-google-plus ml-2" aria-hidden="true"></i></a>
+      <a href="#" class="text-muted"><i class="fa fa-tripadvisor ml-2" aria-hidden="true"></i></a></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+ $(document).ready(function(){
+    $(window).on("load",function() {  
+      $("#loader").fadeOut();  
+   });
+  
+  AOS.init({
+    duration :1200,
+  });
+
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    nav:false,
+    dots:true,
+    autoplay:true,
+    margin:10,
+   // autoplayTimeout:2500,
+    //items:3;
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:4,
+            loop:true
+        }
+    }
+
+
+});
+
+
+});
+ 
+</script>
+
+
+</body>
+</html>
